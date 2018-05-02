@@ -1,0 +1,23 @@
+﻿@model Dictionary<string, string>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<script src = "@Url.Content("~/Scripts/jquery-1.10.2.js")" ></script>
+<script src="@Url.Content("~/Scripts/indexjs.js")"></script>
+<link href="@Url.Content("~/Content/HomeStyle.css")" rel="stylesheet" />
+<h2>Index</h2>
+@{
+    
+        <div id="keyDiv">
+            @foreach (var item in Model)
+            {
+                @item.Key.ToLower(); <br />
+            }
+            
+        </div>
+        <div id="valueDiv">
+            @foreach (var item in Model)
+            {
+                @item.Value.ToUpper(); <br />
+            }
+        </div>
+    
+}
